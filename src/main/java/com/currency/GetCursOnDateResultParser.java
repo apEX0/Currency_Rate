@@ -118,14 +118,9 @@ public class GetCursOnDateResultParser {
 
 
 
-
-
-
-
-
                 connection.setAutoCommit(false);
                 stmt = connection.createStatement();
-                String sql = "INSERT INTO \"currency_rate\" (currency_name,rate,upload_date) "
+                String sql = "INSERT INTO \"currency_rate\" (currency_name,rate,upload_time) "
                         + "VALUES ('"+answer.name+"','"+answer.curs+"','"+getXMLGregorianCalendarNow()+"');";
 
                 stmt.executeUpdate(sql);
